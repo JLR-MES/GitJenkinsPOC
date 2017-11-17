@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GitJenkinsPOC
 {
-    public partial class frmLogin : Form
+    public partial class frmMain : Form
     {
-        public frmLogin()
+        public frmMain()
         {
             InitializeComponent();
         }

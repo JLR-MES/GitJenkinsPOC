@@ -1,6 +1,6 @@
 ﻿namespace GitJenkinsPOC
 {
-    partial class frmLogin
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // frmLogin
+            // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 300);
-            this.Name = "frmLogin";
-            this.Text = "Login";
+            this.ClientSize = new System.Drawing.Size(636, 261);
+            this.Name = "frmMainForm";
+            this.Text = "Main Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
@@ -44,4 +45,3 @@
         #endregion
     }
 }
-
