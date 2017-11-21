@@ -1,4 +1,15 @@
-﻿using System;
+﻿# region "History"
+/*
+File Name:                  DBConstant.cs
+Create By:                  Janmejay Thakur
+Purpose:                    This class fileis used to write all contant variables
+Change History:             Changed By          Changed Date            Comment
+*********************************************************************************************
+1                           Janmejay Thakur     20/11/2017          Added method CreateSqlConnection
+*/
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +19,13 @@ namespace GitDataLayer
 {
     public static class DBConstant
     {
-//        public static String  STR_CONNECTION_STRING= "GitConnection";
-        public static String STR_CONNECTION_STRING = "Data Source=HNJPFMDSRV01;Initial Catalog=DevOpsDemo;Integrated Security=True";
-        public static String STR_COMMAND_NAME = "cmdConnection";
 
-        public static String SP_LOGIN = "SP_Login";
+        //Contant Variables
+        public static String APP_CONNECTION_STRING = "GitConnection";
+
+        //Stored Procedure Name
+        public static String SP_UserDetails = "SP_UserDetails";
+        public static String SP_ValidUser = "SP_ValidUser";
 
 
 
