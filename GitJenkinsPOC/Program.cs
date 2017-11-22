@@ -16,6 +16,7 @@ namespace GitJenkinsPOC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Call Login Page
             Application.Run(new frmLogin());
         }
     }
