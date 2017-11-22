@@ -26,7 +26,7 @@ using System.Data.SqlClient;
         private void GetUserDetails()
         {
             GitBLogin clsGitBLogin = new GitBLogin();
-            frmLogin clsLogin = new frmLogin();
+            Login frmLogin = new Login();
 
             DataSet dsUser = new DataSet();
 
