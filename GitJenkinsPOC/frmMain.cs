@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GitBusinessLayer;
-using System.Data.SqlClient;
-
-    namespace GitJenkinsPOC
+using Microsoft.Reporting.WinForms;
+using System.Configuration;
+namespace GitJenkinsPOC
 {
     public partial class frmMain : Form
     {
@@ -45,6 +40,32 @@ using System.Data.SqlClient;
                 }
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadReport();
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+        }
+        private void LoadReport()
+        {
+            string strPath = string.Empty;
+
+                ReportViewer rptViewer = new ReportViewer();
+                ServerReport serverRptObj = rptViewer.ServerReport;
+                serverRptObj.ReportServerUrl = new Uri("http://HNJPFMDSRV01/ReportServer_SSRS");
+                rptViewer.ProcessingMode = ProcessingMode.Remote;
+                serverRptObj.ReportPath = "\\ReportServer_SSRS\\UserReport";
+                rptViewer.ServerReport.Refresh();
+                rptViewer.ShowParameterPrompts = false;
+                rptViewer.ProcessingMode = ProcessingMode.Remote;
+        }
+
 
     }
 }

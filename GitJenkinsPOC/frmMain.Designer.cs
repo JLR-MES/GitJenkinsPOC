@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlUserDetails = new System.Windows.Forms.Panel();
+            this.lblDesignation = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,7 +42,8 @@
             this.lblUserID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblDesignation = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.rptViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlUserDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,16 @@
             this.pnlUserDetails.Name = "pnlUserDetails";
             this.pnlUserDetails.Size = new System.Drawing.Size(421, 209);
             this.pnlUserDetails.TabIndex = 0;
+            // 
+            // lblDesignation
+            // 
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignation.Location = new System.Drawing.Point(204, 176);
+            this.lblDesignation.MinimumSize = new System.Drawing.Size(100, 10);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(100, 13);
+            this.lblDesignation.TabIndex = 11;
             // 
             // label12
             // 
@@ -185,21 +197,29 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "User Details";
             // 
-            // lblDesignation
+            // btnPrint
             // 
-            this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesignation.Location = new System.Drawing.Point(204, 176);
-            this.lblDesignation.MinimumSize = new System.Drawing.Size(100, 10);
-            this.lblDesignation.Name = "lblDesignation";
-            this.lblDesignation.Size = new System.Drawing.Size(100, 13);
-            this.lblDesignation.TabIndex = 11;
+            this.btnPrint.Location = new System.Drawing.Point(466, 42);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 2;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // rptViewer
+            // 
+            this.rptViewer.Location = new System.Drawing.Point(0, 0);
+            this.rptViewer.Name = "ReportViewer";
+            this.rptViewer.Size = new System.Drawing.Size(396, 246);
+            this.rptViewer.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 373);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pnlUserDetails);
             this.Name = "frmMain";
@@ -229,5 +249,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblDesignation;
+        private System.Windows.Forms.Button btnPrint;
+        private Microsoft.Reporting.WinForms.ReportViewer rptViewer;
     }
 }
